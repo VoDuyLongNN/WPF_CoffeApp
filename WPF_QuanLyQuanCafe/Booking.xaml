@@ -1,0 +1,175 @@
+﻿<Window x:Class="WPF_QuanLyQuanCafe.Booking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_QuanLyQuanCafe"
+        mc:Ignorable="d"
+        Icon="Asset\titleIcon.png"
+        Title="Booking" Height="550" Width="800"
+        Background="#f2ca97" FontFamily="Jetbrains Mono" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <Style TargetType="TextBlock" x:Key="txbText">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#066163"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="btnDescNoEmpty">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Background" Value="#FF1818"/>
+            <Setter Property="IsEnabled" Value="False"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#8E3200"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="btnDescEmpty">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Background" Value="#F1CA89"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#8E3200"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="ClickMode" Value="Hover"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="contentTable">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        
+    </Window.Resources>
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="Đặt Bàn" FontSize="30"
+                   Padding="0 20 0 20" Style="{StaticResource txbText}"/>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center"
+                    Margin="0 0 0 20">
+            <Button Style="{StaticResource btnDescNoEmpty}" Margin="0 0 10 0">
+                <TextBlock Text="Bàn đã có người" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}">
+                <TextBlock Text="Bàn Trống" Style="{StaticResource contentTable}"/>
+            </Button>
+        </StackPanel>
+        <Grid DockPanel.Dock="Top" Height="350"
+              Margin="10 0 10 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="3"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Tầng 1" Style="{StaticResource txbText}" Grid.Column="1"/>
+            <TextBlock Text="Tầng 2" Style="{StaticResource txbText}" Grid.Column="5"/>
+            <Label Background="#8E3200" Grid.Column="4" Grid.RowSpan="3" Grid.Row="2"/>
+            <Label Background="#8E3200" Grid.Column="4"  Grid.Row="0"/>
+            <Label Background="#8E3200" Grid.Column="0" Grid.RowSpan="5"/>
+            <Label Background="#8E3200" Grid.Column="8" Grid.RowSpan="5"/>
+            <Label Background="#8E3200" Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="5"/>
+            <Label Background="#8E3200" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5"/>
+            <Label Background="#8E3200" Grid.Column="3"  Grid.Row="5" Width="30" HorizontalAlignment="Left"/>
+            <Label Background="#8E3200" Grid.Column="3"  Grid.Row="5" Width="30" HorizontalAlignment="Right"/>
+
+            <StackPanel Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center">
+                <Image Source="Images/upArrowRed.png" Width="30" Margin="0 20 0 0"/>
+                <TextBlock Text="Lối vào" Margin="0 10 0 0"/>
+            </StackPanel>
+
+            <!-- Bàn đã có người -->
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="1" Grid.Row="1">
+                <TextBlock Text="B01" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="2" Grid.Row="1">
+                <TextBlock Text="B05" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="2" Grid.Row="2">
+                <TextBlock Text="B06" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="2" Grid.Row="3">
+                <TextBlock Text="B07" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="2" Grid.Row="4">
+                <TextBlock Text="B08" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="3" Grid.Row="1">
+                <TextBlock Text="B09" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="3" Grid.Row="2">
+                <TextBlock Text="B10" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="3" Grid.Row="3">
+                <TextBlock Text="B11" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="5" Grid.Row="1">
+                <TextBlock Text="B12" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="5" Grid.Row="2">
+                <TextBlock Text="B13" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="5" Grid.Row="3">
+                <TextBlock Text="B14" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="5" Grid.Row="4">
+                <TextBlock Text="B15" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="6" Grid.Row="1">
+                <TextBlock Text="B16" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="6" Grid.Row="2">
+                <TextBlock Text="B17" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="6" Grid.Row="3">
+                <TextBlock Text="B18" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="6" Grid.Row="4">
+                <TextBlock Text="B19" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="7" Grid.Row="1">
+                <TextBlock Text="B20" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="7" Grid.Row="2">
+                <TextBlock Text="B21" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="7" Grid.Row="3">
+                <TextBlock Text="B22" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="7" Grid.Row="4">
+                <TextBlock Text="B23" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescNoEmpty}" Background="#FF1818" Grid.Column="1" Grid.Row="2">
+                <TextBlock Text="B02" Style="{StaticResource contentTable}"/>
+            </Button>
+            
+            <!-- Bàn trống -->
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="1" Grid.Row="3">
+                <TextBlock Text="B03" Style="{StaticResource contentTable}"/>
+            </Button>
+            <Button Style="{StaticResource btnDescEmpty}" Grid.Column="1" Grid.Row="4">
+                <TextBlock Text="B04" Style="{StaticResource contentTable}"/>
+            </Button>
+
+        </Grid>
+    </DockPanel>
+    
+</Window>

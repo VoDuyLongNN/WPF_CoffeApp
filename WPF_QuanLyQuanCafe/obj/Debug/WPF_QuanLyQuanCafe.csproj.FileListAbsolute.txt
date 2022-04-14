@@ -1,0 +1,38 @@
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.exe.config
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.exe
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.pdb
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.AssemblyReference.cache
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.SuggestedBindingRedirects.cache
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\MainWindow.g.cs
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\App.g.cs
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe_MarkupCompile.cache
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe_MarkupCompile.lref
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\MainWindow.baml
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.g.resources
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.Properties.Resources.resources
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.exe
+D:\CodeTaoLao\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.pdb
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.exe.config
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.exe
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\bin\Debug\WPF_QuanLyQuanCafe.pdb
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.AssemblyReference.cache
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.SuggestedBindingRedirects.cache
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\MainWindow.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\App.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe_MarkupCompile.cache
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe_MarkupCompile.lref
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\MainWindow.baml
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.g.resources
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.Properties.Resources.resources
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.exe
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\WPF_QuanLyQuanCafe.pdb
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Menu.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Menu.baml
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\ProductDescription.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\ProductDescription.baml
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Booking.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Booking.baml
