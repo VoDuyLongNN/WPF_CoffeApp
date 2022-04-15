@@ -23,5 +23,11 @@ namespace WPF_QuanLyQuanCafe
         {
             InitializeComponent();
         }
+
+        private void closeForm(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }

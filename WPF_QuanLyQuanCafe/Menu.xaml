@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:WPF_QuanLyQuanCafe"
         mc:Ignorable="d"
         Icon="Asset\titleIcon.png"
-        Title="L'Style Coffe/ Menu" Height="800" Width="500"
+        Title="L'Style Coffe/ Menu" Height="800" Width="1000"
         WindowStartupLocation="CenterScreen"
-        Background="#f2ca97" FontFamily="Jetbrains Mono" ResizeMode="NoResize">
+        Background="#f2ca97" FontFamily="Jetbrains Mono" ResizeMode="NoResize" Closed="closeForm">
     <DockPanel>
 
         <DockPanel.Resources>
             <Style TargetType="ScrollViewer" x:Key="scrViewer">
                 <Setter Property="Margin" Value="0 10 0 0"/>
+                <Setter Property="Height" Value="300"/>
             </Style>
             <Style TargetType="ListBox" x:Key="lbProduct">
-                <Setter Property="Margin" Value="0 0 0 10"/>
+                <Setter Property="Margin" Value="0 10 0 10"/>
                 <Setter Property="Background" Value="Transparent"/>
             </Style>
             <Style TargetType="ListBoxItem" x:Key="lbiMenu">
@@ -49,7 +50,7 @@
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="Margin" Value="0 5 0 0"/>
+                <Setter Property="Margin" Value="0 10 0 0"/>
                 <Setter Property="Height" Value="50"/>
             </Style>
         </DockPanel.Resources>
@@ -57,304 +58,341 @@
         <TextBlock DockPanel.Dock="Top" Text="M E N U" TextAlignment="Center"
                    FontSize="30" Margin="0 20 0 10"
                    FontWeight="Bold" Foreground="#066163"/>
-        <Grid DockPanel.Dock="Top">
+        <Grid ShowGridLines="False">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="250"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="250"></RowDefinition>
+                <RowDefinition/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Coffe" Style="{StaticResource txbTypeProduct}"/>
+            <Grid Grid.Row="0" Grid.RowSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="300"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="300"></RowDefinition>
+                </Grid.RowDefinitions>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="1" Style="{StaticResource scrViewer}">
-                <ListBox Style="{StaticResource lbProduct}">
-                    <ListBoxItem Style="{StaticResource lbiMenu}" x:Name="lbItemProduct" Selected="lbItemProduct_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image x:Name="imgProduct" Source="Asset/CafeCosta.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock x:Name="nameProduct" Text="Cafe Costa" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock x:Name="price" Text="25.000đ"/>
+                <TextBlock Text="Coffe" Style="{StaticResource txbTypeProduct}"/>
+
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="1" Style="{StaticResource scrViewer}">
+                    <ListBox Style="{StaticResource lbProduct}">
+                        <ListBoxItem Style="{StaticResource lbiMenu}" x:Name = "lbItemProduct" Selected="lbItemProduct_Selected">
+                            <StackPanel Orientation="Horizontal">
+                                <Image x:Name="imgProduct" Source="Asset/CafeCosta.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock x:Name="nameProduct" Text="Cafe Costa" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock x:Name="price" Text="25.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/CafeSua.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Cafe Sữa" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="20.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}" Selected="lbItemProduct_Selected">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/CafeSua.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Cafe Sữa" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="20.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/CafeSuaKem.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Cafe Sữa Kem" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="27.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/CafeSuaKem.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Cafe Sữa Kem" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="27.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/Ponichico.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Ponichico" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="30.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/Ponichico.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Ponichico" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="30.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/CafeDen.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Cafe Đen" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="13.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/CafeDen.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Cafe Đen" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="13.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
-                </ListBox>
-            </ScrollViewer>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
+                    </ListBox>
+                </ScrollViewer>
 
-            <TextBlock Text="Tea" Style="{StaticResource txbTypeProduct}" Grid.Column="1"/>
+                <TextBlock Text="Tea" Style="{StaticResource txbTypeProduct}" Grid.Column="1"/>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1" Style="{StaticResource scrViewer}">
-                <ListBox Style="{StaticResource lbProduct}">
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/traChanh.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Chanh" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="17.000đ"/>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1" Style="{StaticResource scrViewer}">
+                    <ListBox Style="{StaticResource lbProduct}">
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/traChanh.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Chanh" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="17.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TraBombs.png" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Bombs" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="32.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TraBombs.png" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Bombs" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="32.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TraDen.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Đen" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="27.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TraDen.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Đen" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="27.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TraDuong.png" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Đường" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="15.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TraDuong.png" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Đường" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="15.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TraMatong.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Mật Ong" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="37.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TraMatong.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Mật Ong" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="37.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
-                </ListBox>
-            </ScrollViewer>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
+                    </ListBox>
+                </ScrollViewer>
 
-            <TextBlock Text="Trà Sữa" Style="{StaticResource txbTypeProduct}" Grid.Column="0" Grid.Row="2"/>
+                <TextBlock Text="Trà Sữa" Style="{StaticResource txbTypeProduct}" Grid.Column="0" Grid.Row="2"/>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="3" Style="{StaticResource scrViewer}">
-                <ListBox Style="{StaticResource lbProduct}">
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSDauDoDuongDen.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Đậu Đỏ ..." Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="27.000đ"/>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="3" Style="{StaticResource scrViewer}">
+                    <ListBox Style="{StaticResource lbProduct}">
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSDauDoDuongDen.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Đậu Đỏ ..." Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="27.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSGongCha.png" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa GongCha" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="28.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSGongCha.png" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa GongCha" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="28.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSHongDao.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Hồng Đào" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="20.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSHongDao.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Hồng Đào" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="20.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSMatCha.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Matcha" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="18.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSMatCha.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Matcha" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="18.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSSocola.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Socola" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="31.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSSocola.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Socola" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="31.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSTocoToco.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Toco Toco" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="29.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSTocoToco.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Toco Toco" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="29.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSTranChauDuongDen.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Trân Châu Đường Đen" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="35.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSTranChauDuongDen.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Trân Châu Đường Đen" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="35.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/TSTruyenThong.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Trà Sữa Truyền Thống" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="22.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/TSTruyenThong.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Trà Sữa Truyền Thống" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="22.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
-                </ListBox>
-            </ScrollViewer>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
+                    </ListBox>
+                </ScrollViewer>
 
-            <TextBlock Text="Đồ Uống Có Ga" Style="{StaticResource txbTypeProduct}" Grid.Column="1" Grid.Row="2"/>
+                <TextBlock Text="Đồ Uống Có Ga" Style="{StaticResource txbTypeProduct}" Grid.Column="1" Grid.Row="2"/>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="3" Style="{StaticResource scrViewer}">
-                <ListBox Style="{StaticResource lbProduct}">
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/Gas7up.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="7up" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="17.000đ"/>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="3" Style="{StaticResource scrViewer}">
+                    <ListBox Style="{StaticResource lbProduct}">
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/Gas7up.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="7up" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="17.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/gasCoca.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Coca Cola" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="15.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/gasCoca.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Coca Cola" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="15.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/GasGedBull.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Red Bull" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="20.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/GasGedBull.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Red Bull" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="20.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/gasPepsi.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Pepsi" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="15.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/gasPepsi.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Pepsi" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="15.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <Label Style="{StaticResource lbLine}"/>
+                        </ListBoxItem>
+                        <Label Style="{StaticResource lbLine}"/>
 
-                    <ListBoxItem Style="{StaticResource lbiMenu}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="Asset/GasRevive.jpg" Style="{StaticResource imgProduct}"/>
-                            <StackPanel Style="{StaticResource stackPanelDesc}">
-                                <TextBlock Text="Revive" Style="{StaticResource txbNameProduct}"/>
-                                <TextBlock Text="12.000đ"/>
+                        <ListBoxItem Style="{StaticResource lbiMenu}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Asset/GasRevive.jpg" Style="{StaticResource imgProduct}"/>
+                                <StackPanel Style="{StaticResource stackPanelDesc}">
+                                    <TextBlock Text="Revive" Style="{StaticResource txbNameProduct}"/>
+                                    <TextBlock Text="12.000đ"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListBoxItem>
-                </ListBox>
-            </ScrollViewer>
+                        </ListBoxItem>
+                    </ListBox>
+                </ScrollViewer>
+            </Grid>
+
+            <Button Width="200" Height="60" Background="Transparent"
+                BorderThickness="2" BorderBrush="#8E3200" Grid.Row="1" Grid.Column="3" Click="Button_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/iconKawaiiCoffee.png" Height="40"/>
+                    <TextBlock Text="Đã Chọn: " FontSize="20" VerticalAlignment="Center"
+                           Margin="10 0 0 0"/>
+                    <TextBlock x:Name="txbQuantity" Text="0" FontSize="20" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Label Background="#8E3200" Grid.Column="2" Grid.RowSpan="2"/>
+
+            <StackPanel x:Name="rigthPanelAdd" Grid.Column="3" Visibility="Visible">
+                <Image Width="200" Height="250" Margin="0 50 0 0" x:Name="imgDesc"/>
+                <TextBlock x:Name="NameDesc" TextAlignment="Center" FontSize="20"
+                   Foreground="#066163" Margin="0 20 0 0"/>
+                <TextBlock x:Name="priceDesc" TextAlignment="Center" FontSize="15"
+                   Margin="0 10 0 0"/>
+                <Button x:Name="btnAdd" Width="150" Height="50" Margin="0 20 0 0"
+                Background="Transparent" BorderBrush="#8E3200" BorderThickness="2"
+                Cursor="Hand" Visibility="Hidden" Click="btnAdd_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Thêm" VerticalAlignment="Center" Padding="0 0 10 0"
+                           FontSize="20"/>
+                        <Image Source="Images/AddIcon.png" Width="35" Height="35"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel x:Name="rightPanelBill" Grid.Column="3" Visibility="Hidden">
+                <TextBlock Text="Đơn Mua" Style="{StaticResource txbTypeProduct}" FontSize="25" Foreground="#000"/>
+                <TextBlock x:Name="txbBill" Width="400" Height="500"/>
+            </StackPanel>
         </Grid>
 
-        <Button Width="200" Height="60" Margin="0 20 0 0" Background="Transparent"
-                BorderThickness="2" BorderBrush="#8E3200">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="Images/iconKawaiiCoffee.png" Height="40"/>
-                <TextBlock Text="Đã Chọn: " FontSize="20" VerticalAlignment="Center"
-                           Margin="10 0 0 0"/>
-                <TextBlock x:Name="txbQuantity" Text="0" FontSize="20" VerticalAlignment="Center"/>
-            </StackPanel>
-        </Button>
-        
     </DockPanel>
 </Window>

@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Contact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +73,9 @@
     </Compile>
     <Compile Include="Booking.xaml.cs">
       <DependentUpon>Booking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.xaml.cs">
+      <DependentUpon>Contact.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -155,9 +162,6 @@
     <Resource Include="Asset\TraMatOng.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="TraGung.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Asset\TSDauDoDuongDen.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +205,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\upArrowRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

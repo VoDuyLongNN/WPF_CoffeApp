@@ -36,3 +36,5 @@ D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLy
 D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\ProductDescription.baml
 D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Booking.g.cs
 D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Booking.baml
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Contact.g.cs
+D:\Học Kì 2 - Năm 2\Lập trình Trên Desktop\WPF_QuanLyQuanCafe\WPF_QuanLyQuanCafe\obj\Debug\Contact.baml

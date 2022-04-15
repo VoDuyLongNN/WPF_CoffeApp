@@ -37,5 +37,12 @@ namespace WPF_QuanLyQuanCafe
             this.Hide();
             bookingForm.ShowDialog();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Contact contactForm = new Contact();
+            this.Hide();
+            contactForm.ShowDialog();
+        }
     }
 }

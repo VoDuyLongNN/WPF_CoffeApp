@@ -29,18 +29,44 @@ namespace WPF_QuanLyQuanCafe
             return int.Parse(txbQuantity.Text);
         }
 
+
         public void setTxbQuantily(int n)
         {
             txbQuantity.Text = n.ToString();
         }
 
+        public string billText(string text)
+        {
+            return text;
+        }
+
         private void lbItemProduct_Selected(object sender, RoutedEventArgs e)
         {
-            ProductDescription formDesc = new ProductDescription();
-            formDesc.imgDesc.Source = imgProduct.Source;
-            formDesc.NameDesc.Text = nameProduct.Text;
-            formDesc.priceDesc.Text = price.Text;
-            formDesc.ShowDialog();
+            imgDesc.Source = imgProduct.Source;
+            NameDesc.Text = nameProduct.Text;
+            priceDesc.Text = price.Text;
+            btnAdd.Visibility = Visibility.Visible;
+            rightPanelBill.Visibility = Visibility.Hidden;
+            rigthPanelAdd.Visibility = Visibility.Visible;
+        }
+
+        private void closeForm(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            setTxbQuantily(getTbxQuantily() + 1);
+            txbBill.Text += $"{nameProduct.Text}\t\t : {price.Text}\n";
+            MessageBox.Show($"Bạn đã thêm 1 {nameProduct.Text} vào giỏ hàng");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            rigthPanelAdd.Visibility = Visibility.Hidden;
+            rightPanelBill.Visibility = Visibility.Visible;
         }
     }
 }
